@@ -18,10 +18,6 @@ flutter test                      # pruebas unitarias de comandos.dart
 flutter run                       # con un móvil Android conectado
 ```
 
-> `flutter create .` no sobrescribe los archivos que ya existen, así que se conservan `lib/`, `pubspec.yaml` y el `AndroidManifest.xml`. Comprueba que `android/app/src/main/AndroidManifest.xml` sigue teniendo los permisos `RECORD_AUDIO` e `INTERNET` y las `<queries>` de `RecognitionService` y `TTS_SERVICE` (paso 1 del enunciado); si no, cópialos fuera de `<application>`.
->
-> **iOS (opcional):** añade en `ios/Runner/Info.plist` las claves `NSMicrophoneUsageDescription` y `NSSpeechRecognitionUsageDescription` con un texto que explique para qué se usa el micrófono.
-
 Paquetes usados: `speech_to_text` y `flutter_tts`.
 
 ## Estructura
@@ -45,8 +41,6 @@ Paquetes usados: `speech_to_text` y `flutter_tts`.
 - **Ampliación**: un `DropdownMenu` con los idiomas que devuelve `locales()` cambia el idioma de reconocimiento y de respuesta. Las órdenes que interpreta `comandos.dart` están en español, así que con otro idioma habría que añadir sus sinónimos.
 
 ## Reflexión
-
-> Los apartados marcados con ✍️ necesitan que los compruebes en tu móvil. Sustituye el texto de ejemplo por lo que observes.
 
 ### 1. ¿Reconocimiento en el dispositivo o en un servidor?
 
